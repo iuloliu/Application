@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.contentResolverActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/addToContentResolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="addtextname"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="26dp"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/getFromContentResolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="getFromContentResolver"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="26dp"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/deleteFromContentResolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="deleteFromContentResolver"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="26dp"
+        tools:ignore="MissingConstraints" />
+</LinearLayout>
