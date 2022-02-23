@@ -4,21 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.aidlActivity">
+    tools:context=".activity.aidlActivity"
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/startService"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="18dp" />
+        android:text="startService" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:id="@+id/closeService"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="72dp" />
+        android:text="closeService"/>
+    <Button
+        android:id="@+id/bindService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="bindService"/>
+
+    <Button
+        android:id="@+id/UnBindService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UnBindService"/>
 </LinearLayout>

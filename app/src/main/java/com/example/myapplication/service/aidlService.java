@@ -3,16 +3,22 @@ package com.example.myapplication.service;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.util.Log;
+import android.view.inspector.IntFlagMapping;
+
+import com.example.myapplication.aidl.IAppServiceRemoteBinder;
 
 
 public class aidlService extends Service {
-    public aidlService() {
-    }
-
     @Override
     public IBinder onBind(Intent intent) {
-        return  null;
+        return  new IAppServiceRemoteBinder.Stub() {
+            @Override
+            public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
+
+            }
+        };
     }
 
     @Override
