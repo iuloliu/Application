@@ -15,12 +15,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.myapplication.activity.AActivity;
+import com.example.myapplication.activity.CustomActivity;
+import com.example.myapplication.activity.MyViewGroupActivity;
 import com.example.myapplication.activity.aidlActivity;
 import com.example.myapplication.activity.contentResolverActivity;
 import com.example.myapplication.broadCastReceive.myBroadCast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button exchange, goToA, aidl,contentResolver;
+    private Button exchange, goToA, aidl, contentResolver, customView, myViewGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         aidl.setOnClickListener(this);
         contentResolver = findViewById(R.id.contentResolver);
         contentResolver.setOnClickListener(this);
+        customView = findViewById(R.id.customView);
+        customView.setOnClickListener(this);
+        myViewGroup = findViewById(R.id.MyVG);
+        myViewGroup.setOnClickListener(this);
 
         //注册本地广播相关代码
         myBroadCast broadCast = new myBroadCast();
@@ -139,6 +145,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent2 = new Intent(MainActivity.this, contentResolverActivity.class);
                 startActivity(intent2);
                 break;
+            case R.id.customView:
+                Intent intent3 = new Intent(MainActivity.this, CustomActivity.class);
+                startActivity(intent3);
+                break;
+            case R.id.MyVG:
+                Intent intent4 = new Intent(MainActivity.this, MyViewGroupActivity.class);
+                startActivity(intent4);
+                break;
+
         }
     }
 }

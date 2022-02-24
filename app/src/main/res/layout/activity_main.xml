@@ -31,5 +31,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="contentResolver" />
+    <Button
+        android:id="@+id/customView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="customView" />    <Button
+        android:id="@+id/MyVG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MyVG" />
 
 </LinearLayout>

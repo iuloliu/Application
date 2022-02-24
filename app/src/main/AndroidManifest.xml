@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.myapplication">
+    package="com.example.myapplication" >
 
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
@@ -11,7 +11,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication">
+        android:theme="@style/Theme.MyApplication" >
+
+        <activity
+            android:name=".activity.MyViewGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CustomActivity"
+            android:exported="false" />
+
         <provider
             android:name=".contentProvider.MyContentProvider"
             android:authorities="com.example.myapplication.q"
@@ -35,8 +43,8 @@
             android:exported="false" /> <!-- 静态注册广播，并设置监听内容 -->
         <receiver
             android:name=".broadCastReceive.myBroadCast"
-            android:exported="true">
-            <intent-filter android:priority="100">
+            android:exported="true" >
+            <intent-filter android:priority="100" >
                 <action android:name="msg" />
             </intent-filter>
         </receiver> <!-- provider -->
@@ -47,7 +55,7 @@
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
